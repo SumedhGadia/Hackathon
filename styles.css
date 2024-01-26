@@ -1,0 +1,124 @@
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-between;
+    padding: 0%;
+    
+}
+.mauroon{
+    font-size: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    color: rgb(245, 238, 238);
+    padding: 0%;
+}
+.tkt{
+    padding: 5px;
+}
+.tkt:hover{
+    transform: scale(1.2);
+    transition: all .4s ease;
+}
+.forms{
+    padding: 5px;
+    background-color: rgb(33, 99, 99);
+}
+.ab{
+    position: relative;
+}
+.ab h3{
+    color:#f7f2f2;
+    font-family: joker;
+    font-size: 30px;
+    width: 1600px;
+    position: absolute;
+    top: 2px;
+
+}
+.ab p{
+        color:#f7f2f2;
+        font-size: 25px;
+        font-weight: 400;
+        font-family: joker;
+        position: absolute;
+        top:15%;
+
+}
+body{
+    margin: 10px;
+    background-color: black;
+}
+.about{
+    scale: 1.35;
+      }
+.bodyimg h3{
+    margin-left: 10px;
+    color:#665f5f;
+    font-family: fantasy;
+    font-size: 130px;
+    width: 1400px;
+    position: absolute;
+    top: 0px;
+    
+}
+
+.bodyimg h5{
+    font-size: 25px;
+    color:white;
+}
+ .band h4{
+    border-radius:50px;
+}
+
+
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px;
+    font-family: sans-serif;
+    background-color: rgb(53, 109, 109);
+}
+.Band{
+    
+    border-radius: 30px;
+    background-color: #f1f0a5;
+    padding: 30px;
+    margin: 25px;
+    width:310px;
+    font-family: fantasy;
+    
+}
+
+.account{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.Spot{
+    scale: 0.7
+
+}
+.Spoting{
+    display: flex;
+    flex-wrap: wrap;
+    scale: 0.5;
+    padding: 0px;
+    position: relative;
+}
+.Spot:hover{
+    transform: scale(1.2);
+    transition: all .4s ease;
+}
+.Band:hover{
+    transform: scale(1.2);
+    transition: all .4s ease;
+
+}
+a.link{
+    color: white;
+}
+
+.visited{
+    color: white;
+}

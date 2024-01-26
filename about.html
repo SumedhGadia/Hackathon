@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<head>
+    <title>About Us</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="ab">
+    <img src="bg.jpg" width="100%" height="450px">
+    <h3>
+        <br> Hi,my name is Sumedh Gadia.<br>My Favourite music band is Maroon 5.<br>This website was made for Bosco Bit-Source Code.
+    </h3> 
+     <p>
+        <br><br><br>
+        Contact Details:-<br>
+        Mobile No-9123707808<br>
+        Gmail ID-sumedhgadia2009@gmail.com<br>
+        <br>
+        <br>
+        Fill the form below for Subscription.
+    </p>
+    <div class="forms">
+    <form name="submit-to-google-sheet">
+        <table>
+            <tr>
+                <td>
+                    Name:
+                </td>
+                <td>
+                    <input type="text" minlength="2"  maxlength="30"   placeholder="name"  name="name" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Email:
+                </td>
+                <td>
+                    <input type="mail" minlength="10" maxlength="30"  placeholder="abcd@...."  name="Email" required>
+                </td>
+            </tr> 
+            <tr>
+                <td>
+                   State:
+                </td>
+                <td>
+                    <select id="State" name="State">
+                        <option>Bihar</option>
+                        <option>Odisha</option>
+                        <option>Punjab</option>
+                        <option>Jharkanad</option>
+                        <option>Haryana</option>
+                        <option>Mizoram</option>
+                        <option>Arunachal Pradesh</option>
+                        <option>Rajasthan</option>
+                        <option>Madhya Pradesh</option>
+                        <option>Karnataka</option>
+                        <option>Chhattisgarh</option>
+                        <option>Andhra Pradesh</option>
+                        <option>Himachal Pradesh</option>
+                        <option>Meghalaya</option>
+                        <option>Chandigarh</option>
+                        <option>Tamil Nadu</option>
+                        <option>Assam</option>
+                        <option>Maharashtra</option>
+                        <option>Gujarat</option>
+                        <option>Goa</option>
+                        <option>Kerala</option>
+                        <option>Nagaland</option>
+                        <option>Manipur</option>
+                        <option>Uttar Pradesh</option>
+                        <option>West Bengal</option>
+                        <option>Sikkim</option>
+                        <option>Telangana</option>
+                        <option>Tripura</option>
+                        <option>Uttarakhand</option> 
+                    </select>
+                </td>
+            </tr> 
+            <tr>
+                <td>
+                    City:
+                </td>
+                <td>
+                    <input type="text" minlength="2" maxlength="30"  placeholder="City" name="City">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Duration in Months:
+                </td>
+                <td>
+                
+                    <input type="number" min="1" max="60"  placeholder=" eg-5 "  name="time" required>
+                </td>
+            </tr> 
+            <tr>
+                <td>
+                    <center>
+                    <input type="submit" value="submit" name="submit">
+                    </center>
+                </td>
+            </tr>       
+            
+        </table>
+        <span id="Success"></span>
+    </form>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzxE3PT4JbtRUPsl5L55JLm-iOacgDOcku_IyHSIexn4P0NlBGguIB9yv6sOAZNVykM6w/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const Success=document.getElementById('Success');
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response  => {
+              success.innerHTML="data submited successfully";
+            setTimeout(function()
+            {
+                success.innerHTML="";
+            },5000)
+            form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+       
+    </script>
+    <p2>
+        After submitting the form the amount to be paid will be sent via email to you.
+    </p>
+</div>
+    </div>
+</body>
+</html>
